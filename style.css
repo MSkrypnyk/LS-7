@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgba(0, 0, 0, 0.806);
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1740px;
+  margin-inline: auto;
+  background: rgb(235, 2, 147);
+  background: radial-gradient(
+    circle,
+    rgba(235, 2, 147, 1) 0%,
+    rgba(0, 0, 0, 1) 93%
+  );
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+img {
+  max-width: 300px;
+  width: 100%;
+}
+
+h1 {
+  color: deeppink;
+  font-weight: 900;
+}
+
+h5 {
+  color: aliceblue;
+  margin-top: 5px;
+  font-size: 15px;
+}
+
+p {
+  color: aliceblue;
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+
+.products > div {
+  background: rgb(10, 10, 7);
+  background: radial-gradient(
+    circle,
+    rgba(10, 10, 7, 1) 0%,
+    rgba(255, 213, 240, 0.7233018207282913) 87%
+  );
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.product-1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.product-2 {
+  grid-area: 1 / 2 / 3 / 3;
+}
+.product-3 {
+  grid-area: 1 / 3 / 2 / 4;
+}
+.product-4 {
+  grid-area: 2 / 1 / 4 / 2;
+}
+.product-5 {
+  grid-area: 3 / 2 / 4 / 3;
+}
+.product-6 {
+  grid-area: 2 / 3 / 4 / 4;
+}
+
+.cards {
+  margin-top: 70px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+.cards > div {
+  background: rgb(10, 10, 7);
+  background: radial-gradient(
+    circle,
+    rgba(10, 10, 7, 1) 0%,
+    rgba(255, 213, 240, 0.7233018207282913) 87%
+  );
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 592px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .product-1 {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .product-2 {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  .product-3 {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  .product-4 {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+  .product-5 {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+  .product-6 {
+    grid-area: 3 / 2 / 4 / 3;
+  }
+
+  .container {
+    padding: 10px;
+  }
+}
